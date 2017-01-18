@@ -2,7 +2,7 @@ from __future__ import absolute_import, unicode_literals
 import random
 from celery.decorators import task
 
-from .models import BillingItem, Paragon
+from .models import BillingItem, Paragon, ParagonItems
 import time
 import pytesseract
 from PIL import Image, ImageFilter
@@ -13,6 +13,9 @@ def items_from_image(image):
     hj=Paragon.objects.get(image=image)
     dane = pytesseract.image_to_string(Image.open(hj.image.path), lang='pol')
     dane2 = to_ogorki(dane)
+    for i,j in dane2:
+        p=ParagonItems(id_paragonu=hj.id, cena =j, produkt=i)
+        p.save()
     print('id z celery', hj.id)
     hj.image_data = dane2
     hj.save()

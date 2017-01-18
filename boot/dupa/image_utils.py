@@ -212,10 +212,10 @@ def to_ogorki(tekst):
 
 
 
+    
 
-
-
-    return nazwa_produktu
+    
+    return zip(nazwa_produktu,new_cena_3)
 
 if __name__ =='__main__':
     tekst =pytesseract.image_to_string(Image.open('IMG_20170113_191448.jpg'), lang='pol')
