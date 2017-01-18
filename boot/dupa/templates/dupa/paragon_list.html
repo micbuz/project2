@@ -1,0 +1,60 @@
+{% extends 'dupa/base_paragon.html' %}
+
+{% block content %}
+    <div class="container">
+
+
+
+	    <div class="row">
+		      <div class="col-md-4">
+	{% for i in qs %}
+
+	<a href={{ i.image.url }} >
+	      	<img src={{ i.image.url }} alt="Mountain View" style="width:304px;height:228px;">
+		</a>
+	<br>
+
+	<br>
+
+
+	{% endfor %}
+
+
+
+
+			</div>
+		        <div class="col-md-4">
+		
+	  {% for i in qs %}
+	  {{ i.image.url }} 
+	          <br>
+          {% endfor %}
+
+
+			</div>
+			  <div class="col-md-4"></div>
+	    </div>
+
+    </div> <!-- /container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}
+
+
+	    {% block jquery %}
+			  
+			   {% endblock %}
+
+			   {% block dupa %} {% endblock %}
+
