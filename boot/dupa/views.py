@@ -39,8 +39,16 @@ def paragon_base(request):
 
 def lista_paragonow(request):
     qs = Paragon.objects.all()[::-1]   #.reverse()
+    context={}
+    try:
+        itemki =[]
+        for i in qs:
+            itemki.append(i.paragonitems_set.all())
+        context['itemki'] = itemki
 
-    context ={'qs':qs}
+    except:
+        pass
+    context['qs'] = qs
     return render(request, 'dupa/paragon_list2.html', context)
 
 

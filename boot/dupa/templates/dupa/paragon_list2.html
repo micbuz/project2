@@ -23,25 +23,12 @@
 
 			</div>
 		        <div class="col-md-4">
-		
-				asdasdfas <br>
-				asdfasf <br>
-				asdasdfas <br>
-	   			asdfasf <br>
-				sdfas <br>
-			     	asdfasf <br>
-				dasdfas <br>
-				asdfasf <br>
-				fas <br>
-				asdfasf <br>
-				ias<br>
-	         		sdfasf <br>
-				dasdfas <br>
-				asdfasf <br>
-				sdasdfas <br>
-	      			asdfasf <br>
-				asdasdfas <br>
-	           		asdfasf <br>
+	
+			{% for itemka in i.paragonitems_set.all %}
+			{{ itemka.produkt }}
+			{{ itemka.cena }}
+			<br>
+			{% endfor %}
 
 			</div>
 			  <div class="col-md-4">  

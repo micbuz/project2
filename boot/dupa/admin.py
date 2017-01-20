@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import BillingItem, Paragon
+from .models import BillingItem, Paragon, ParagonItems
 
 
-admin.site.register(BillingItem)
 admin.site.register(Paragon)
+admin.site.register(ParagonItems)

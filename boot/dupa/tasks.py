@@ -14,7 +14,7 @@ def items_from_image(image):
     dane = pytesseract.image_to_string(Image.open(hj.image.path), lang='pol')
     dane2 = to_ogorki(dane)
     for i,j in dane2:
-        p=ParagonItems(id_paragonu=hj.id, cena =j, produkt=i)
+        p=ParagonItems(id_paragonu=hj, cena =j, produkt=i)
         p.save()
     print('id z celery', hj.id)
     hj.image_data = dane2

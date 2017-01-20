@@ -5,9 +5,9 @@
 
 
 
+	{% for i in qs %}
 	    <div class="row">
 		      <div class="col-md-4">
-	{% for i in qs %}
 
 	<a href={{ i.image.url }} >
 	      	<img src={{ i.image.url }} alt="Mountain View" style="width:304px;height:228px;">
@@ -17,7 +17,6 @@
 	<br>
 
 
-	{% endfor %}
 
 
 
@@ -25,15 +24,32 @@
 			</div>
 		        <div class="col-md-4">
 		
-	  {% for i in qs %}
-	  {{ i.image.url }} 
-	          <br>
-          {% endfor %}
-
+				asdasdfas <br>
+				asdfasf <br>
+				asdasdfas <br>
+	   			asdfasf <br>
+				sdfas <br>
+			     	asdfasf <br>
+				dasdfas <br>
+				asdfasf <br>
+				fas <br>
+				asdfasf <br>
+				ias<br>
+	         		sdfasf <br>
+				dasdfas <br>
+				asdfasf <br>
+				sdasdfas <br>
+	      			asdfasf <br>
+				asdasdfas <br>
+	           		asdfasf <br>
 
 			</div>
-			  <div class="col-md-4"></div>
+			  <div class="col-md-4">  
+				  {{ i.image_data }}
+			  </div>
 	    </div>
+	    <hr>
+	{% endfor %}
 
     </div> <!-- /container -->
 
