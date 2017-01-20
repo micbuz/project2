@@ -38,7 +38,7 @@ def paragon_base(request):
 
 
 def lista_paragonow(request):
-    qs = Paragon.objects.all()[::-1]   #.reverse()
+    qs = Paragon.objects.filter(user1=request.user)[::-1]   #.reverse()
     context={}
     try:
         itemki =[]

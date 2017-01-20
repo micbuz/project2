@@ -1,7 +1,7 @@
 {% extends 'dupa/base_paragon.html' %}
 
 {% block content %}
-    <div class="container">
+<!--    <div class="container"> -->
 
 
 
@@ -23,22 +23,66 @@
 
 			</div>
 		        <div class="col-md-4">
-	
-			{% for itemka in i.paragonitems_set.all %}
-			{{ itemka.produkt }}
-			{{ itemka.cena }}
-			<br>
-			{% endfor %}
+			
+			{% if i.paragonitems_set.all %}
+
+ {#			{% for itemka in i.paragonitems_set.all %}  #}
+		
+
+
+<table class='table table-bordered table-striped table-hover'>
+                      <thead>
+                      <tr>
+                        <th class ='text-center'> Produkt </th>
+                        <th class ='text-center'> Cena </th>
+                      </tr>
+                      </thead>
+
+                      <tbody>
+                         {% for itemka in i.paragonitems_set.all %}
+                                <tr>
+                                <td class="text-left"> {{ itemka.produkt }}</td>
+                                <td class="text-center" >{{ itemka.cena }}</td>
+                                </tr>
+                         {% endfor %}
+                      </tbody>
+                   </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#			{{ itemka.produkt }} #} 
+{#			{{ itemka.cena }}  #}
+{#			{% endfor %}  #}
+
+
+			{% else %}
+			{{ i.image_data }}
+
+			{% endif %}
 
 			</div>
 			  <div class="col-md-4">  
-				  {{ i.image_data }}
+				
 			  </div>
 	    </div>
 	    <hr>
 	{% endfor %}
 
-    </div> <!-- /container -->
+	<!--    </div>  --> <!-- /container --> 
 
 
 
