@@ -31,7 +31,7 @@ urlpatterns = [
     url(r'^email/$', joins_views.email_form, name='email'),  
    url(r'^numbers/$', dupa_views.numbers, name='numbers'),
     url(r'^paragony/', include('dupa.urls',namespace='paragony')),    
-    
+    url(r'^', include('log_user.urls',namespace='loginapp')),   
 #    url(r'^(?P<ref_id>.*)$', joins_views.share, name='share'),
     
     

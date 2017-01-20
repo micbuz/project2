@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'joins',
     'django_celery_beat',
     'django_celery_results',
-
+    'log_user',
 
     ]
 

@@ -69,7 +69,7 @@ def add_receipt(request):
         if form.is_valid():
             new_rec =form.save(commit=False)
             #new_rec.image_data =tesseract_analyse(request.FILES['image']) 
-            
+            new_rec.user1=request.user            
             new_rec.save()
             print('filenme', new_rec.image.name)
           
